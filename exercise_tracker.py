@@ -64,11 +64,11 @@ class ExerciseTrackerApp:
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6))  # Create two subplots vertically stacked
 
         # Plot the calendar heatmap for "pushup" in the first subplot
-        calmap.yearplot(df.set_index('day')['pushup'], year=2024, ax=ax1, cmap='YlGn', fillcolor='grey', vmin=0, vmax=40)
+        calmap.yearplot(df.set_index('day')['pushup'], year=2024, ax=ax1, cmap='Greens', fillcolor='lightgrey', vmin=0, vmax=40)
         ax1.set_title('Pushups Calendar Heatmap - 2024 (Green Tones)')
 
         # Plot the calendar heatmap for "mountain_climber" in the second subplot
-        calmap.yearplot(df.set_index('day')['mountain_climber'], year=2024, ax=ax2, cmap='YlGn', fillcolor='grey', vmin=0, vmax=40)
+        calmap.yearplot(df.set_index('day')['mountain_climber'], year=2024, ax=ax2, cmap='Oranges', fillcolor='lightgrey', vmin=0, vmax=40)
         ax2.set_title('Mountain Climbers Calendar Heatmap - 2024 (Green Tones)')
 
         # Adjust layout to prevent overlap
